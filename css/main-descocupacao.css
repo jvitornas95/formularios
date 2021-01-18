@@ -21,6 +21,7 @@ form input{
     display: flex;    
     justify-content: space-between;    
     flex-direction: column;
+    display: none;
 }  
 
 .form-itens label{
@@ -36,8 +37,32 @@ form input{
     margin-top: 20px;
 }
 
-.form-main button{
+.form-main button{    
     margin-bottom: 25px;
+    border: 1px solid;
+    outline: none;
+}
+
+.btn-action button{    
+    background-color: #eee;
+}
+
+.btn-action button:hover{
+    background-color: #fdb813;
+}
+
+.form-animation{
+    animation: down 300ms;
+}
+
+.form-itens label{
+    display: inline-block;
+}
+
+#img-agua,
+#img-energia,
+#img-gas{    
+    height: 15px;
 }
 
 @media (min-width: 425px){
@@ -55,14 +80,29 @@ form input{
         justify-content: space-between;   
         flex-direction: row; 
         flex-wrap: wrap;
+        display: none;
+        
     }  
     
     .form-itens label{
+        display: inline-block;
         align-self: center;
-        width: 49%;
-    }
+        width: 49%;        
+    }    
 
     form label{
         padding: 15px;
+    }
+
+}
+
+@keyframes down {
+    0%{
+        opacity: 0.5;
+        transform: translateY(-10%);
+    } 
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
     }
 }
