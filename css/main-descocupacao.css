@@ -9,6 +9,10 @@ form input{
     font-size: 62.5%
 }
 
+.form-itens input{
+    display: none;
+}
+
 .form-main h1{
     font-size: 2.4rem;
 }
@@ -27,6 +31,13 @@ form input{
 .form-itens label{
     align-self: center;
     width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.form-itens img{
+    position: absolute;
+    left: 15px;
 }
 
 .form-main h3{
@@ -55,13 +66,12 @@ form input{
     animation: down 300ms;
 }
 
-.form-itens label{
-    display: inline-block;
-}
 
-#img-agua,
-#img-energia,
-#img-gas{    
+
+.img-agua,
+.img-energia,
+.img-gas{    
+    align-self: flex-start;
     height: 15px;
 }
 
